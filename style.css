@@ -1,0 +1,105 @@
+*:focus {
+  outline: none;
+}
+
+img {
+    width: 28% ;
+    height: auto ;
+    }
+.centrado{
+	margin: 10px auto;
+	display: block;
+    }
+h1 {
+  font-family: 'Gloria Hallelujah', arial;
+}
+
+body, html {
+  text-align: center;
+  background-color: #91fdcd;
+  color: black;
+  font-family: 'Cabin';
+  padding: 20px;
+  margin: 0;
+}
+
+h2, h3 {
+  color: black;
+  font-family: 'Cabin', arial;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+div {
+    text-align: center;
+  color: black;
+  border-color: #f9da52;
+}
+
+#user {
+  width: 250px;
+  color: #fff;
+  right: 10px;
+  top: -2px;
+  position: absolute;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  line-height: 50px;
+  height: 50px;
+  font-family: "Cabin", arial;
+  background-color: #ff005d;
+}
+
+input#name {
+  border: #ffb84c;
+  height: 40px;
+  box-sizing: border-box;
+  font-family: "Cabin", arial;
+  font-size: 17px;
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 20px;
+}
+
+button, #finalizarPaises, #finalizarConciencia {
+  font-family: "Cabin", Helvetica, Arial, sans-serif;
+  background-color: #FF9800;
+  border-radius: 20px;
+  border: 1px solid #FF9800;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 10px 15px;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-shadow: 0px 1px 0px #2f6627;
+  margin-top: 10px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  height: 20px;
+  margin-bottom: 10px;
+  width: 20px;
+}
+
+#welcome {
+  display: none;
+}
+
+#contenidoAmbiente, #contenidoPaises {
+  display: none;
+}
+
+form, #contenidoAmbiente, #contenidoPaises {
+  text-align: left;
+}
+#results .counter {
+  font-size: 18px;
+  margin: 5px;
+}

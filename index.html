@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Trivia </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <center>
+    <img src = https://vignette.wikia.nocookie.net/dreamscape317/images/2/27/Trivia.png/revision/latest?cb=20180817223800>
+    </center>
+  </header>
+
+  <div id="user" style="display: none;">
+    Bienvenidx <span id="user_name"></span>
+  </div>
+
+  <!-- Primera Pantalla -->
+  <section id="primerapantalla" class="helveticaText"><br>
+
+    <p>¿Cuál es tu nombre?</p>
+
+    <!-- <form action=""> -->
+      <input type="text" id="name" />
+      <button type="button" id="capturar_nombre" onclick="dar_click()">Entrar</button>
+    <!-- </form> -->
+
+  </section>
+  <!-- /Primera Pantalla -->
+
+
+  <section id="welcome">
+    <h2> ¡Hola , vamos a jugar! <br> Mucha suerte!!</h2>
+    <h3>Elige la categoría</h3>
+    <button type="button" id="conciencia">Conciencia Ambiental</button>
+    <button type="button" id="paises" >Países</button>
+  </section>
+
+  <section id="contenidoAmbiente">
+    <form id="formConciencia" class="box-border">
+
+      <div id="conciencia_pregunta_1">
+        <h3>PREGUNTA 1</h3>
+        <p> ¿En cuánto tiempo se degrada una goma de mascar o chicle? </p>
+        <br>
+        <center>
+        <img class="centra"
+            src="https://www.dentegra.com.mx/wp-content/uploads/2017/05/shutterstock_569994736-1.jpg"
+            alt="goma">
+        </center>
+        <br>
+        <input type="radio" name="conciencia_1" value="6 meses">6 meses</input><br>
+        <input type="radio" name="conciencia_1" value="3 años">3 años</input><br>
+        <input type="radio" name="conciencia_1" value="5 años">5 años</input><br>
+        <button type="button" onclick="mostrarConciencia2()"> Siguiente </button>
+      </div>
+
+      <div id="conciencia_pregunta_2" style="display: none;">
+        <h3>PREGUNTA 2</h3>
+        <p> ¿En cuánto tiempo se degrada una lata de refresco? </p>
+    <center>
+      <img class ="centra"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNGUTuLnklwLnIgPdbkT0K4fOV5_sNo8vda-8UjnrKQHetL14s"
+        alt="lata">
+      </center>
+        <input type="radio" name="conciencia_2" value="20 años">20 años<br>
+        <input type="radio" name="conciencia_2" value="10 años">10 años<br>
+        <input type="radio" name="conciencia_2" value="50 años">50 años<br>
+        <button type="button" onclick="mostrarConciencia3()"> Siguiente </button>
+      </div>
+
+      <div id="conciencia_pregunta_3" style="display: none;">
+        <h3>PREGUNTA 3</h3>
+        <p> ¿En cuánto tiempo se degrada la colilla de un cigarro? </p>
+        <center>
+        <img class="centra"
+            src="https://t2.uc.ltmcdn.com/images/7/2/4/img_en_que_contenedor_se_tiran_las_colillas_33427_600.jpg"
+            alt="cigarro">
+        </center>
+        <input type="radio" name="conciencia_3" value="2 años">2 años<br>
+        <input type="radio" name="conciencia_3" value="4 meses">4 meses<br>
+        <input type="radio" name="conciencia_3" value="6 meses">6 meses<br>
+        <input id="finalizarConciencia" type="submit" value="Finalizar">
+      </div>
+
+
+    </form>
+  </section>
+
+
+  <section id="contenidoPaises">
+    <form id="formPaises" class="box-border">
+
+      <div id="paises_pregunta_1">
+        <h3>PREGUNTA 1</h3>
+        <p>¿Qué paises tienen el portugués como lengua oficial? </p>
+        <input type="radio" name="paises_1" value="Argentina"> Argentina</input><br>
+        <input type="radio" name="paises_1" value="Brasil">Brasil</input><br>
+        <input type="radio" name="paises_1" value="Peru">Peru</input><br>
+        <button type="button" onclick="mostrarPaises2()">Siguiente</button>
+      </div>
+
+      <div id="paises_pregunta_2" style="display:none;">
+        <h3>PREGUNTA 2</h3>
+        <p>¿Contra quien fue la guerra de independencia de España? </p>
+        <input type="radio" name="paises_2" value="la invasion sueca">La invasion sueca<br>
+        <input type="radio" name="paises_2" value="la invasion inglesa">La invasion inglesa<br>
+        <input type="radio" name="paises_2" value="la invasion francesa">La invasion francesa<br>
+        <button type="button" onclick="mostrarPaises3()">Siguiente</button>
+      </div>
+
+      <div id="paises_pregunta_3" style="display:none;">
+        <h3>PREGUNTA 3</h3>
+        <p> ¿En que locacalidad española nació Miguel de Cervantes? </p>
+        <input type="radio" name="paises_3" value="Barcelona">Barcelona<br>
+        <input type="radio" name="paises_3" value="Salamanca">Salamanca<br>
+        <input type="radio" name="paises_3" value="Alcala de Henares">Alcala de Hernares<br>
+        <input id="finalizarPaises" type="submit" value="Finalizar">
+      </div>
+
+    </form>
+  </section>
+
+  </div>
+
+  <div id="results" style="display:none;">
+    <h3> Tus Resultados obtenidos </h3>
+    <img class="centrado" src="https://www.autoelectrico.app/wp-content/uploads/2018/05/gestion_ambiental.jpg" alt="ambiente">
+    <div class="counter">Respuestas correctas: <span id="correct-answers">0</span></div>
+    <div class="counter">Respuestas incorrectas: <span id="incorrect-answers">0</span></div>
+    <button id="resetear" onclick="resetear()">resetear</button>
+  </div>
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>
